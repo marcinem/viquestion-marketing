@@ -18,5 +18,16 @@
   "homepage": "https://github.com/marcinem/viquestion-marketing#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.10",
+    "concat": "^1.0.3",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "path": "^0.12.7",
+    "plumber": "^0.4.8"
   }
 }

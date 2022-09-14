@@ -1,6 +1,9 @@
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const autoprefixer = require("gulp-autoprefixer");
+const uglify = require("gulp-uglify-es").default;
+const concat = require("gulp-concat");
 const path = require("path");
-const less = require("gulp-less");
-const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 
 const jsfiles = ["js/plausible-tracking.js", "js/vi-player.js"];
