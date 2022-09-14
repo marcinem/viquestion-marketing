@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var clickers = document.querySelectorAll("a[data-track]");
   clickers.forEach(function (clicker) {
     clickerName = clicker.dataset("data-track");
-    plausible("Click", { props: { CTA: clickerName } });
+    clicker.addEventListener("click", function (event) {
+      plausible("Click", { props: { CTA: clickerName } });
+    });
   });
 });
