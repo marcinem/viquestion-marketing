@@ -6,15 +6,26 @@ const concat = require("gulp-concat");
 const path = require("path");
 const rename = require("gulp-rename");
 
-const jsfiles = ["js/plausible-tracking.js", "js/vi-player.js"];
+const analytics = ["js/plausible-tracking.js"];
 
-function js() {
+const misc = ["js/vi-player.js"];
+
+function plausiblejs() {
   return gulp
-    .src(jsfiles)
+    .src(analytics)
     .pipe(concat("plausible-tracking.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./dist/"));
 }
 
-gulp.task("js", js);
-gulp.task("default", gulp.parallel(js));
+function miscjs() {
+  return gulp
+    .src(misc)
+    .pipe(concat("misc.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/"));
+}
+
+gulp.task("plausiblejs", plausiblejs);
+gulp.task("miscjs", miscjs);
+gulp.task("default", gulp.parallel(plausiblejs, miscjs));
