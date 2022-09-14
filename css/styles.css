@@ -17,8 +17,11 @@
   opacity: 1;
 }
 .video-is-opened {
-  width: 800px;
+  width: 500px;
   max-width: none;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
 }
 .video-is-opened > #videoIntroWrapper {
   opacity: 1;

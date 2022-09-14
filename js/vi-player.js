@@ -10,6 +10,7 @@ videoIntro.volume = 0.2;
 const videoExplainer = document.getElementById("videoExplainer");
 
 const btnPlayStep3 = document.getElementById("btnPlayStep3");
+const noThanksBtn = document.getElementById("noThanks");
 
 const playButton = document.getElementById("playButton");
 const closeIcon = document.getElementById("closeIcon");
@@ -50,7 +51,7 @@ function closePlayer() {
 
 playButton.addEventListener("click", openPlayer);
 closeIcon.addEventListener("click", closePlayer);
-
+noThanksBtn.addEventListener("click", closePlayer);
 // videoFrame.addEventListener("click", openPlayer);
 
 btnPlayStep3.addEventListener("click", playExplainer);
