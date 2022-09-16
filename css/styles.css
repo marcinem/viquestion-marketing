@@ -82,7 +82,7 @@
 
 .heading-scribble::after {
   position: absolute;
-  content: "";
+  /* content: ""; */
   width: 363px;
   height: 64px;
   left: 2%;
