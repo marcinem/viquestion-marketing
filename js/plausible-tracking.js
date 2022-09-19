@@ -15,6 +15,6 @@ function isCalendlyEvent(e) {
  
 window.addEventListener("message", function(e) {
   if(isCalendlyEvent(e) && e.data.event === "calendly.event_scheduled") {
-    plausible("Demo Booked", { props: { CTA: clicker.dataset.track } });
+    plausible("Demo Booked");
   }
 });
